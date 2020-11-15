@@ -1,6 +1,6 @@
 twilio.env
-.Lib
-.Include
-.env
-.Scripts
+Lib
+Include
+env
+Scripts
 pyvenv.cfg
