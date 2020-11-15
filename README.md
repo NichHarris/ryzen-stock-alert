@@ -1,6 +1,7 @@
-#ryzen-stock-alert
+# ryzen-stock-alert
 
-##Setup Environment Variables
+## Setup Environment Variables
+
 '''
 export TWILIO_ACCOUNT_SID="YOUR_ACCOUNT_SID"
 export TWILIO_AUTH_TOKEN="YOUR AUTH TOKEN"
