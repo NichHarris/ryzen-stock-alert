@@ -1,2 +1,2 @@
 
-Product is Currently: ['OUT OF STOCK.']['OUT OF STOCK.']
+Product is Currently: ['OUT OF STOCK.']

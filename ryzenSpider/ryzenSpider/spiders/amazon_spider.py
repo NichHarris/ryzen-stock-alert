@@ -1,13 +1,16 @@
 # Amason spider
 import scrapy
-class NeweggSpider(scrapy.Spider):
+import json
+class AmazonSpider(scrapy.Spider):
     name = "amazon"
     open('AmazonStatus.txt', 'w').close()
 
+    with open('sites.json', 'r') as f:
+        sites = json.load(f)
+    
     def start_requests(self):
         urls = [
-            'https://www.amazon.ca/DANIPEW-Sepu-ltura-Cotton-Performance-T-Shirt/dp/B08166SLDF',
-            'https://www.amazon.ca/AMD-Ryzen-3600-12-thread-processor/dp/B07STGGQ18?ref_=ast_sto_dp',
+            'https://www.amazon.ca/DANIPEW-Sepu-ltura-Cotton-Performance-T-Shirt/dp/B08166SLDF'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)

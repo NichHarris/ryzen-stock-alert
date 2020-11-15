@@ -1,4 +1,6 @@
 twilio.env
-tutorial
-Lib
-Include
+.Lib
+.Include
+.env
+.Scripts
+pyvenv.cfg

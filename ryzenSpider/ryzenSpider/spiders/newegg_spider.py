@@ -6,11 +6,10 @@ class NeweggSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666',
-            #'https://www.newegg.ca/amd-ryzen-5-3600x/p/N82E16819113568', test
+            'https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666'
         ]
         for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+            yield scrapy.Request(url, callback=self.parse)
     
     def parse(self, response):
         myList = []
@@ -25,3 +24,4 @@ class NeweggSpider(scrapy.Spider):
             # f.write(str(myList))
         self.log(f'Saved File {filename}')
         
+    

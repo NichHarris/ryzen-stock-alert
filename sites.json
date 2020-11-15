@@ -1,0 +1,58 @@
+[
+    {
+        "url": "https://www.canadacomputers.com/product_info.php?cPath=4_64&item_id=183432",
+        "Keyword": "Online In stock",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Canada Comp",
+        "enabled": true
+    },
+    {
+        "url": "https://www.bhphotovideo.com/c/product/1598377-REG/amd_100_100000065box_ryzen_5_5600x_3_7.html/DFF/d60",
+        "Keyword": "In Stock",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "BandH",
+        "enabled": true
+    },
+    {
+        "url": "https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666",
+        "Keyword": "In stock.",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg",
+        "enabled": true
+    },    
+    {
+        "url": "https://www.amazon.ca/DANIPEW-Sepu-ltura-Cotton-Performance-T-Shirt/dp/B08166SLDF",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Amazon",
+        "enabled": true
+    },    
+    {
+        "url": "https://microbytes.com/amd-ryzen-5-5600x-3-7g-4-6g-6c-12t-32mb-am4-wraith-stealth-fan.html",
+        "Keyword": "In stock",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Microbytes",
+        "enabled": true
+    },
+    {
+        "url": "https://www.pc-canada.com/item/100-000000065.html",
+        "Keyword": "Total Available: ",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "PC Canada",
+        "enabled": true
+    },
+    {
+        "url": "https://www.vuugo.com/amd-cpu-100-100000065BOX.html?tracking=5108053939762",
+        "Keyword": "Availabitiy: In Stock",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Vuugo",
+        "enabled": true
+    }
+]
