@@ -1,17 +1,12 @@
 import json
 import webbrowser
 import time
-# import scrapy
 import os
 from datetime import datetime
 from enum import Enum
 import requests
-# import subprocess
 from urllib.request import urlopen, Request
 from twilio.rest import Client
-
-# class Methods(str, enum):
-#     GET_URLLIB = "GET_URLLIB"
 
 # Environment Variables and Constants
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
@@ -35,6 +30,11 @@ if discWebHook != "":
     print("Done!")
 else:
     print("Discord not initialized")
+
+def timeFunction():
+    now = datetime.now()
+    currentTime = now.strftime("%H:%M:%S")
+    return currentTime
 
 def alert(site, currentTime):
     product = site.get('name')
@@ -75,12 +75,12 @@ def urllib_get(url):
 def main():
     searches = 0
     while True:
-        now = datetime.now()
-        currentTime = now.strftime("%H:%M:%S")
+        currentTime = timeFunction()
         print("Starting search {} at {}".format(searches, currentTime))
         searches += 1
         
         for site in sites:
+            currentTime = timeFunction()
             if site.get('enabled'):
                 print("\tChecking {} ...".format(site.get('name')))
 
@@ -93,9 +93,10 @@ def main():
                     alert(site, currentTime)
                 elif not isAlert and index == -1:
                     alert(site, currentTime)
-                print(now)
+                print(currentTime)
                 
                 time.sleep(30)
+                
 
 
     
