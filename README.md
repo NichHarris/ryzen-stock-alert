@@ -9,5 +9,5 @@ export TWILIO_NUMBER="Given Twilio Number"
 export MY_NUM="Your Phone Number"
 ```
 TODO: 
-- [] requirements
-- [] make use of spiders
+- requirements
+- make use of spiders
