@@ -98,8 +98,12 @@ def main():
             currentTime = timeFunction()
             if site.get('enabled'):
                 print("\tChecking {} ...".format(site.get('name')))
-
-                html = urllib_get(site.get('url'))
+                try:
+                    html = urllib_get(site.get('url'))
+                except Exception as e:
+                    print("\tConnection Failed...")
+                    print("\tSkipping")
+                    continue
                 keyword = site.get('Keyword')
                 isAlert = site.get('alert')
                 index = html.upper().find(keyword.upper())
@@ -109,7 +113,7 @@ def main():
                 elif not isAlert and index == -1:
                     alert(site, currentTime)
                 print(currentTime)
-                time.sleep(30)
-                
+            time.sleep(10)          
+        time.sleep(30)
 if __name__ == '__main__':
     main()
