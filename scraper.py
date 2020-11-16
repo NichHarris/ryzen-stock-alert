@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 from enum import Enum
 import requests
+import smtplib, ssl
 from urllib.request import urlopen, Request
 from twilio.rest import Client
 
@@ -15,6 +16,10 @@ myNum = os.environ['MY_NUM']
 twilioNum = os.environ['TWILIO_NUMBER']
 discWebHook = os.environ['DISC_WEBHOOK']
 openWebBrowser = os.environ['OPEN_WEB_BROWSER'] == True
+userEmail = "harris.nicholas1998@gmail.com"
+smtp_server = "smtp.gmail.com"
+userPass = os.environ['MY_PASS']
+port = 587
 
 with open('sites.json', 'r') as f:
     sites = json.load(f)
@@ -37,6 +42,7 @@ def timeFunction():
     return currentTime
 
 def alert(site, currentTime):
+    open('alerts.txt', 'w').close()
     product = site.get('name')
     print("{} IN STOCK".format(product))
     print(site.get('url'))
@@ -44,9 +50,18 @@ def alert(site, currentTime):
         webbrowser.open(site.get('url'), new=1)
     send_text(site.get('url'))
     disc_webhook(product, site.get('url'))
+    #send_email(site.get('url'))
     with open('alerts.txt', 'w') as f:
         f.write("\n{} IN STOCK: {} \n Time: {}".format(product, site.get('url'),currentTime))
     # time.sleep(60)
+
+def send_email(url):
+    context = ssl.create_default_context()
+    with smtplib.SMTP(smtp_server, port) as server:
+        server.starttls(context=context)
+        server.login(userEmail, userPass)
+        server.sendmail(userEmail, userEmail, url)
+
 
 def send_text(url):
     client.messages.create(to=myNum, from_=twilioNum, body=url)
@@ -94,12 +109,7 @@ def main():
                 elif not isAlert and index == -1:
                     alert(site, currentTime)
                 print(currentTime)
-                
                 time.sleep(30)
                 
-
-
-    
-
 if __name__ == '__main__':
     main()
