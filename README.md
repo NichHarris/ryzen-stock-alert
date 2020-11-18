@@ -9,7 +9,6 @@ $ pip install python3.9
 $ pip install virtualenv
 $ virtualenv env
 $ activate C:\Users\"your user"\venv\Scripts\activate
-
 ```
 
 ## Requirements
@@ -18,7 +17,6 @@ $ pip install twilio
 $ pip install beautifulsoup4
 $ pip install urllib3
 $ pip install smptlib
-
 ```
 
 ## Setup Environment Variables
@@ -29,13 +27,11 @@ $ export TWILIO_AUTH_TOKEN="YOUR AUTH TOKEN"
 $ export TWILIO_NUMBER="Given Twilio Number"
 $ export MY_NUM="Your Phone Number"
 $ export DISC_WEBOOK="Your Webhook Link"
-
 ```
 
 ## Running
 ```
 $ python scraper.py
-
 ```
 Alternatively, replace `scraper.py` with the name of the script you are using
 
