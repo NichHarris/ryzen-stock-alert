@@ -24,7 +24,7 @@ port = 587
 # with open('sites.json', 'r') as f:
 #     sites = json.load(f)
 
-with open('sites3080.json', 'r') as f:
+with open('USsites.json', 'r') as f:
     sites = json.load(f)
 
 # Twilio
@@ -56,7 +56,7 @@ def alert(site, currentTime):
     #send_email(site.get('url'))
     with open('alerts.txt', 'w') as f:
         f.write("\n{} IN STOCK: {} \n Time: {}".format(product, site.get('url'),currentTime))
-    # time.sleep(60)
+    time.sleep(60)
 
 def send_email(url):
     context = ssl.create_default_context()
@@ -117,7 +117,7 @@ def main():
                 elif not isAlert and index == -1:
                     alert(site, currentTime)
                 print(currentTime)
-            time.sleep(10)          
-        time.sleep(30)
+            time.sleep(5)          
+        time.sleep(300)
 if __name__ == '__main__':
     main()

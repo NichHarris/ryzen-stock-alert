@@ -1,0 +1,202 @@
+[
+    {
+        "url": "https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452?Item=N82E16814126452&Description=RTX%203080&cm_re=RTX_3080-_-14-126-452-_-Product&quicklink=true",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3897-kr/p/N82E16814487518?Item=N82E16814487518&Description=RTX%203080&cm_re=RTX_3080-_-14-487-518-_-Product&quicklink=true",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457?Item=N82E16814126457&Description=RTX%203080&cm_re=RTX_3080-_-14-126-457-_-Product&quicklink=true",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597?Item=N82E16814137597&Description=RTX%203080&cm_re=RTX_3080-_-14-137-597-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g-oc/p/N82E16814137598?Item=N82E16814137598&Description=RTX%203080&cm_re=RTX_3080-_-14-137-598-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": false,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336?Item=N82E16814932336&Description=RTX%203080&cm_re=RTX_3080-_-14-932-336-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": false,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453?Item=N82E16814126453&Description=RTX%203080&cm_re=RTX_3080-_-14-126-453-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": false,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3885-kr/p/N82E16814487520?Item=N82E16814487520&Description=RTX%203080&cm_re=RTX_3080-_-14-487-520-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080gaming-oc-10gd/p/N82E16814932329?Item=N82E16814932329&Description=RTX%203080&cm_re=RTX_3080-_-14-932-329-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080vision-oc-10gd/p/N82E16814932337?Item=N82E16814932337&Description=RTX%203080&cm_re=RTX_3080-_-14-932-337-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/gigabyte-geforce-rtx-3080-gv-n3080aorus-x-10gd/p/N82E16814932345?Item=N82E16814932345&Description=RTX%203080&cm_re=RTX_3080-_-14-932-345-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3883-kr/p/N82E16814487521?Item=N82E16814487521&Description=RTX%203080&cm_re=RTX_3080-_-14-487-521-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.newegg.com/evga-geforce-rtx-3080-10g-p5-3881-kr/p/N82E16814487522?Item=N82E16814487522&Description=RTX%203080&cm_re=RTX_3080-_-14-487-522-_-Product",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Newegg US 3080",
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628331/msi-geforce-rtx-3080-ventus-3x-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628346/evga-geforce-rtx-3080-ftw3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628686/asus-geforce-rtx-3080-strix-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628318/asus-geforce-rtx-3080-tuf-gaming-overclocked-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628330/msi-geforce-rtx-3080-gaming-x-trio-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628303/asus-geforce-rtx-3080-tuf-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    },
+    {
+        "url": "https://www.microcenter.com/product/628344/evga-geforce-rtx-3080-xc3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card",
+        "Keyword": "Add to Cart",
+        "alert": true,
+        "method": "GET_URLLIB",
+        "name": "Micro Center US 3080",
+        "enabled": true,
+        "tag": "img",
+        "class": "image"
+    }
+]

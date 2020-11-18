@@ -5,7 +5,9 @@
         "alert": true,
         "method": "GET_URLLIB",
         "name": "Canada Comp 3080",
-        "enabled": true
+        "enabled": true,
+        "tag": "a",
+        "class": "text-dark text-truncate_3"
     },
     {
         "url": "https://www.newegg.ca/p/pl?d=3080&N=100007708%208000&isdeptsrh=1",
@@ -13,14 +15,18 @@
         "alert": true,
         "method": "GET_URLLIB",
         "name": "Newegg 3080",
-        "enabled": true
-    },
+        "enabled": true,
+        "tag": "a",
+        "class": "item-img"
+    },    
     {
         "url": "https://microbytes.com/catalogsearch/result/index/?cat=0&limit=all&q=rtx+3080",
         "Keyword": "Add to Cart",
         "alert": true,
         "method": "GET_URLLIB",
         "name": "Microbytes 3080",
-        "enabled": true
+        "enabled": true,
+        "tag": "a",
+        "class": "product-image"
     }
 ]

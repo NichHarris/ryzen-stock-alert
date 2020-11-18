@@ -28,9 +28,6 @@ port = 587
 with open('sites3080.json', 'r') as f:
     sites = json.load(f)
 
-
-
-
 # Twilio
 print("Initializing Twilio...")
 client = Client(account_sid, auth_token)
@@ -48,18 +45,18 @@ def timeFunction():
     currentTime = now.strftime("%H:%M:%S")
     return currentTime
 
-def alert(site, link, currentTime):
+def alert(site, directLink, currentTime):
     open('alerts.txt', 'w').close()
     product = site.get('name')
     print("{} IN STOCK".format(product))
-    print(link)
+    print(directLink)
     if openWebBrowser:
-        webbrowser.open(link, new=1)
-    send_text(link)
-    disc_webhook(product,link)
+        webbrowser.open(directLink, new=1)
+    # send_text(link)
+    # disc_webhook(product,)
     #send_email(site.get('url'))
     with open('alerts.txt', 'w') as f:
-        f.write("\n{} IN STOCK: {} \n Time: {}".format(product, link,currentTime))
+        f.write("\n{} IN STOCK: {} \n Time: {}".format(product, directLink ,currentTime))
     # time.sleep(60)
 
 def send_email(url):
@@ -69,7 +66,6 @@ def send_email(url):
         server.login(userEmail, userPass)
         server.sendmail(userEmail, userEmail, url)
 
-
 def send_text(url):
     client.messages.create(to=myNum, from_=twilioNum, body=url)
     print("Twilio message sent")
@@ -77,7 +73,7 @@ def send_text(url):
 def disc_webhook(product, url):
     if discWebHook != "":
         data = {
-            "content": "{} in stock at {}".format(product, url)
+            "content": "<@&778101209012633600> {} in stock at {}".format(product, url)
         }
         result = requests.post(discWebHook, data=json.dumps(data), headers={"Content-Type": "application/json"})
         try:
@@ -99,40 +95,43 @@ def main():
     while True:
         currentTime = timeFunction()
         print("Starting search {} at {}".format(searches, currentTime))
-        searches += 1
-        
+        searches += 1    
         for site in sites:
-            currentTime = timeFunction()
             if site.get('enabled'):
                 print("\tChecking {} ...".format(site.get('name')))
+
                 ## Getting link to 3080 product page
                 try:
                     html = urllib_get(site.get('url'))
                 except Exception as e:
-                        print("\tConnection Failed...")
-                        print("\tSkipping")
-                        continue
-                
+                    print("\tConnection Failed...")
+                    print("\tSkipping")
+                    continue
+
                 soup = BeautifulSoup(html, 'html.parser')
                 keyword = site.get('Keyword')
                 isAlert = site.get('alert')
                 index = html.upper().find(keyword.upper())
-                ## TODO: Use the tags to individually search each page
-                if isAlert and index != -1:
-                    ## Using BS4 to find all the links to products on this page
-                    for link in soup.find_all("a", class_="item-image", href=True):
-                        tags = link['href']
-                        print("I worked: ")
-                        print(tags)
-                        # alert(site, tags, currentTime)
-                elif not isAlert and index == -1:
-                    ## Using BS4 to find all the links to products on this page
-                    for link in soup.find_all("a", class_="product-image", href=True):
-                        tags = link['href']
-                        # alert(site, tags, currentTime)
+
+                for link in soup.find_all(site.get('tag'), class_=site.get('class'), href=True):
+                    directLink = link['href']
+                    try:
+                        html = urllib_get(directLink)
+                    except Exception as e:
+                        print("\tLink Connection Failed...")
+                        print("\tSkipping")
+                        continue
+                
+                    index = html.upper().find(keyword.upper())
+                    if isAlert and index != -1:
+                        print(directLink)
+                        alert(site, directLink, currentTime)
+                    elif index == -1:
+                        continue
+                    currentTime = timeFunction()
                     print(currentTime)
-                time.sleep(10)          
-        time.sleep(30)
+            time.sleep(10)                            
+        time.sleep(300)
 
 if __name__ == '__main__':
     main()
